@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>高奕江  个人主页</title>
-    <!-- 引入 Google Fonts 提升现代感 -->
+    <title>高奕江 | 个人主页 · 材料×数学·编程空间</title>
+    <!-- Google Fonts + 字体优化 -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <!-- Font Awesome 6 (免费图标库) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -38,7 +38,7 @@
             background: #5c7cac;
         }
 
-        /* 背景动态网格 (现代科技感) */
+        /* 背景动态网格 + 光晕 */
         .bg-grid {
             position: fixed;
             top: 0;
@@ -51,7 +51,6 @@
                 linear-gradient(90deg, rgba(30, 40, 60, 0.2) 1px, transparent 1px);
             background-size: 50px 50px;
         }
-        /* 光晕渐变 */
         .bg-glow {
             position: fixed;
             top: -20%;
@@ -69,7 +68,7 @@
             padding: 2rem 1.5rem 5rem;
         }
 
-        /* 头部 + 个人简介 */
+        /* 头部区域 */
         .hero {
             display: flex;
             flex-wrap: wrap;
@@ -119,7 +118,7 @@
         .desc {
             font-size: 1rem;
             color: #cbd5f0;
-            max-width: 500px;
+            max-width: 600px;
             margin-bottom: 2rem;
             line-height: 1.6;
         }
@@ -151,7 +150,7 @@
             box-shadow: 0 10px 20px -5px rgba(0, 80, 200, 0.3);
         }
 
-        /* 头像区域 3D 悬浮效果 */
+        /* 头像区 */
         .avatar-area {
             flex: 0.5;
             min-width: 200px;
@@ -169,15 +168,6 @@
         .avatar-card:hover {
             transform: scale(1.02);
         }
-        .avatar-img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 1.5rem;
-            background: #1e2a3a;
-            display: block;
-        }
-        /* 模拟一个简洁的占位头像（纯CSS art + 文字，更好看且无需外部图片） */
         .avatar-placeholder {
             width: 200px;
             height: 200px;
@@ -207,7 +197,7 @@
 
         /* 通用章节 */
         section {
-            margin-bottom: 5rem;
+            margin-bottom: 4rem;
         }
         .section-title {
             font-size: 2rem;
@@ -229,7 +219,7 @@
             margin-left: 8px;
         }
 
-        /* 技能卡片网格 */
+        /* 卡片网格通用 */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -239,9 +229,10 @@
             background: rgba(18, 22, 32, 0.7);
             backdrop-filter: blur(4px);
             border-radius: 1.5rem;
-            padding: 0rem;
+            padding: 1.2rem 1rem;
             border: 1px solid rgba(72, 160, 255, 0.2);
             transition: all 0.25s;
+            cursor: pointer;
         }
         .skill-card:hover {
             border-color: rgba(95, 158, 255, 0.6);
@@ -252,38 +243,56 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            margin-bottom: 1rem;
         }
         .skill-header i {
-            padding-left: 1rem;
             font-size: 2rem;
             color: #7aaaff;
         }
         .skill-name {
-            font-size: 2rem;
+            font-size: 1.4rem;
             font-weight: 600;
         }
-        .skill-bar {
-            background: #252e3e;
-            border-radius: 20px;
-            height: 8px;
-            overflow: hidden;
-            margin: 12px 0 8px;
+        /* 特殊资源卡片样式——ZLIB 醒目 */
+        .resource-card {
+            background: linear-gradient(135deg, rgba(35, 55, 90, 0.85), rgba(20, 30, 55, 0.9));
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(100, 180, 250, 0.5);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
         }
-        .skill-level {
-            background: linear-gradient(90deg, #5f9eff, #b2d0ff);
-            width: 0%;
-            height: 100%;
-            border-radius: 20px;
+        .resource-card:hover {
+            transform: translateY(-6px);
+            border-color: #7aaaff;
+            box-shadow: 0 20px 30px -12px rgba(0, 120, 255, 0.25);
+            background: linear-gradient(135deg, rgba(45, 70, 110, 0.9), rgba(25, 40, 65, 0.95));
         }
-        .skill-percent {
-            font-size: 0.8rem;
-            text-align: right;
-            color: #b8ceff;
+        .zlib-badge {
+            background: #1e3a5f;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-left: 12px;
+            color: #b8e2ff;
+        }
+        .external-link-icon {
+            margin-left: auto;
+            font-size: 1.2rem;
+            opacity: 0.7;
+            transition: 0.2s;
+        }
+        .skill-card:hover .external-link-icon {
+            opacity: 1;
+            transform: translateX(4px);
+            color: #7aaaff;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
-
-        /* 联系区域 */
+        /* 联系区 */
         .contact-area {
             background: linear-gradient(120deg, rgba(25, 35, 55, 0.5), rgba(15, 20, 32, 0.7));
             border-radius: 2rem;
@@ -340,174 +349,278 @@
 <div class="bg-glow"></div>
 
 <div class="container">
-    <!-- Hero 区域 -->
+    <!-- Hero 个人简介区 -->
     <div class="hero">
         <div class="hero-content">
             <div class="badge">
-                <i class="fas fa-code"></i>  Build the Future
+                <i class="fas fa-code"></i>  材料·数学 · 终身学习
             </div>
             <h1>高奕江 <span class="highlight"></span></h1>
             <div class="desc">
                 大家好，我是一名热爱编程与数学的（材料学）硕士。本科就读于河北工业大学数学与应用数学专业，
-              现读与石家庄铁道大学材料工程专业（生活所迫）。平时喜欢写代码、研究新技术，也乐于分享自己的学习心得。
-              这是我用 GitHub Pages 搭建的第一个个人网站，用来记录成长与作品。
+                现就读于石家庄铁道大学材料工程专业（生活所迫）。平时喜欢写代码、研究新技术，也乐于分享学习心得。
+                这里是我用 GitHub Pages 搭建的个人网站，用来记录知识沉淀与创作。欢迎交流，一起进步！
             </div>
             <div class="social-links">
-               
+                <!-- 可留空或补充其他链接，保持简洁 -->
             </div>
         </div>
         <div class="avatar-area">
             <div class="avatar-card">
-                <!-- 创意纯css占位头像 (不使用外部图床，干净且美观) -->
                 <div class="avatar-placeholder">
                     <span>✨</span>
-                    <span>头像欠着</span>
+                    <span>头像待更新</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 作品 section -->
-   <section>
-    <div class="section-title">
-        <i class="fas fa-cpu"></i> 材料相关
-        <div class="title-line"></div>
-    </div>
-    
-    <div class="skills-grid">
-        <div>
-            <a href="固体物理.pdf" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fas fa-file-pdf"></i>
-                        <span class="skill-name">固体物理</span>
-                    </div> 
-                </div>
-            </a> 
+    <!-- 材料相关 PDF 区 -->
+    <section>
+        <div class="section-title">
+            <i class="fas fa-cube"></i> 材料相关
+            <div class="title-line"></div>
         </div>
-        <div>
-            <a href="断裂力学改.pdf" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fas fa-file-pdf"></i>
-                        <span class="skill-name">断裂力学</span>
-                    </div> 
-                </div>
-            </a> 
+        <div class="skills-grid">
+            <div>
+                <a href="固体物理.pdf" target="_blank">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="skill-name">固体物理</span>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+            <div>
+                <a href="断裂力学改.pdf" target="_blank">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="skill-name">断裂力学</span>
+                        </div>
+                    </div>
+                </a> 
+            </div>
         </div>
-    </div>
-</section> 
+    </section> 
   
-  <section>
-    <div class="section-title">
-        <i class="fas fa-cpu"></i> 数学相关
-        <div class="title-line"></div>
-    </div>
-    
-    <div class="skills-grid">
-        <div>
-            <a href="TikZ使用手册.pdf" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fas fa-file-pdf"></i>
-                        <span class="skill-name">TikZ使用手册</span>
-                    </div> 
-                </div>
-            </a> 
+    <!-- 数学相关 PDF 区 -->
+    <section>
+        <div class="section-title">
+            <i class="fas fa-square-root-variable"></i> 数学相关
+            <div class="title-line"></div>
         </div>
-        <div>
-            <a href="初中数学.pdf" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fas fa-file-pdf"></i>
-                        <span class="skill-name">初中数学</span>
-                    </div> 
-                </div>
-            </a> 
+        <div class="skills-grid">
+            <div>
+                <a href="TikZ使用手册.pdf" target="_blank">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="skill-name">TikZ使用手册</span>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+            <div>
+                <a href="初中数学.pdf" target="_blank">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="skill-name">初中数学</span>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+            <div>
+                <a href="数值分析.pdf" target="_blank">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="skill-name">数值分析</span>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+            <div>
+                <a href="考研笔记.pdf" target="_blank">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="skill-name">考研数学</span>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+            <div>
+                <a href="工科运筹.pdf" target="_blank">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-file-pdf"></i>
+                            <span class="skill-name">工科运筹</span>
+                        </div>
+                    </div>
+                </a> 
+            </div>
         </div>
-      <div>
-            <a href="数值分析.pdf" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fas fa-file-pdf"></i>
-                        <span class="skill-name">数值分析</span>
-                    </div> 
-                </div>
-            </a> 
-        </div>
-      <div>
-            <a href="考研笔记.pdf" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fas fa-file-pdf"></i>
-                        <span class="skill-name">考研数学</span>
-                    </div> 
-                </div>
-            </a> 
-        </div>
-      <div>
-            <a href="工科运筹.pdf" target="_blank" style="text-decoration: none; color: inherit; display: block;">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <i class="fas fa-file-pdf"></i>
-                        <span class="skill-name">工科运筹</span>
-                    </div> 
-                </div>
-            </a> 
-        </div>
-    </div>
-</section> 
+    </section> 
 
-  
-
-   
+    <!-- ✨ 新增：学习资源推荐 + Z-Library 优雅展示 ✨ -->
+    <section>
+        <div class="section-title">
+            <i class="fas fa-graduation-cap"></i> 数字资源 · 智识泉源
+            <div class="title-line"></div>
+        </div>
+        <div class="skills-grid">
+            <!-- 主推 Z-Library 卡片，醒目美观且带有外链标识 -->
+            <div>
+                <a href="https://zh.z-library.sk/" target="_blank" rel="noopener noreferrer">
+                    <div class="skill-card resource-card">
+                        <div class="skill-header">
+                            <i class="fas fa-book-open" style="color: #ffb347;"></i>
+                            <span class="skill-name">Z-Library 数字图书馆</span>
+                            <i class="fas fa-external-link-alt external-link-icon"></i>
+                        </div>
+                        <div style="margin-top: 10px; font-size: 0.85rem; color: #cddcff; line-height: 1.4;">
+                            全球最大的数字图书馆之一，海量电子书与学术资源。科研、文学、专业教材，一键探索知识宇宙。<br>
+                            <span style="font-size:0.7rem; background: rgba(0,0,0,0.3); display:inline-block; padding:2px 8px; border-radius:20px; margin-top:8px;">
+                                <i class="fas fa-arrow-right"></i> 直达资源站（需科学上网）
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- 可选增加一个学术搜索引擎风格的辅助卡片，让资源模块更饱满 (可选) 让界面更丰富 -->
+            <div>
+                <a href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-graduation-cap" style="color:#6ea4ff;"></i>
+                            <span class="skill-name">Google 学术</span>
+                            <i class="fas fa-external-link-alt external-link-icon"></i>
+                        </div>
+                        <div style="margin-top: 8px; font-size: 0.8rem; color: #b1c3f0;">
+                            追踪前沿研究，快速索引文献（需科学上网）
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- 软件下载 -->
+            <div>
+                <a href="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzk4ODQ3MzgzNw==&action=getalbum&album_id=3985102505721004036" target="_blank" rel="noopener noreferrer">
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <i class="fas fa-flask"></i>
+                            <span class="skill-name">软件管家</span>
+                            <i class="fas fa-external-link-alt external-link-icon"></i>
+                        </div>
+                        <div style="margin-top: 8px; font-size: 0.8rem; color: #b1c3f0;">
+                            免费下载科研软件，轻松获取工具
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+    </section>
 
     <!-- 联系 / 合作区 -->
     <div class="contact-area">
         <i class="fas fa-paper-plane" style="font-size: 2.2rem; color: #7aa9ff;"></i>
         <h3 style="margin: 0.8rem 0 0.3rem;">开放合作 & 交流</h3>
-        <p style="margin-bottom: 1rem;">无论是技术分享、问题咨询还是聊创意，都欢迎联系。虽然我是小趴菜就是了。最后我会尽快把石铁大毕业论文模板的TeX做出来。</p>
+        <p style="margin-bottom: 1rem;">无论是技术分享、数学探讨、材料模拟，还是聊创意，都欢迎联系。虽然我是小趴菜，但会尽快把石铁大毕业论文模板的TeX做出来分享！</p>
         <div class="contact-email">
             <i class="far fa-envelope"></i> gjj_2132@163.com
         </div>
         <div style="margin-top: 1rem;">
-            <span style="background: #1f2a40; padding: 0.2rem 1rem; border-radius: 30px; font-size: 0.75rem;">⚡ 响应时间: 24小时内</span>
+            <span style="background: #1f2a40; padding: 0.2rem 1rem; border-radius: 30px; font-size: 0.75rem;"><i class="far fa-clock"></i> 响应时间: 24小时内</span>
         </div>
     </div>
 
     <div class="footer-note">
-        <i class="far fa-copyright"></i> 2026 高奕江 · 构建于HTML5  · 保持热爱
+        <i class="far fa-copyright"></i> 2026 高奕江 · 构建于HTML5 · 保持热爱 · 知识共享
     </div>
 </div>
 
-<!-- 简单添加一点hover动态效果，平滑滚动 -->
+<!-- 简单平滑滚动 + 资源外链友好提醒（由于所有链接均有效，无多余alert，但保留优雅） -->
 <script>
-    // 添加平滑滚动效果，以及一些小点缀（动态加载技能进度条动画可见即可，无需额外）
-    document.querySelectorAll('.project-link, .social-icon').forEach(link => {
-        if(link.getAttribute('href') === '#') {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                // 模拟演示提示（因为演示环境没有实际链接）
-                alert('✨ 感谢关注！这是一个演示链接，实际项目可在此部署真实地址。');
-            });
-        }
-    });
-    // 让技能条在可视区域内动效展现，提升体验 (轻微)
-    const skillBars = document.querySelectorAll('.skill-level');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                const bar = entry.target;
-                const width = bar.style.width;
-                if(width && width !== '0%') {
-                    // 已经设置宽度的，不做额外更改, 只是一个小彩蛋
-                    bar.style.transition = 'width 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1)';
-                }
-                observer.unobserve(bar);
-            }
+    // 针对所有带 external-link-icon 的外部链接添加一个控制台友好的提示（非强制，但提升用户体验）
+    // 为了保持美观，不会有任何alert打扰，仅做外部跳转的平滑追踪。
+    // 同时为所有的 .skill-card 添加轻微的波纹效果（可选）
+    // 另外，确保技能条交互动画（由于没有百分比的skill-level，但保留通用观察器不会报错）
+    
+    // 平滑处理所有带有 target="_blank" 的链接，不会有额外弹窗，提高安全性
+    const allExternalLinks = document.querySelectorAll('a[target="_blank"]');
+    allExternalLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // 可选：记录一下点击事件，无侵入。纯属增强体验，不干扰跳转
+            // 也可以不做任何阻止，只是让控制台有记录（无影响）
+            console.log(`打开外部链接: ${link.href}`);
         });
-    }, { threshold: 0.4 });
-    skillBars.forEach(bar => observer.observe(bar));
+    });
+    
+    // 让卡片hover有精细感，没有任何功能冲突
+    // 添加动态光效跟随鼠标（极简风格小彩蛋，不影响性能）
+    const cards = document.querySelectorAll('.skill-card');
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--x', `${x}px`);
+            card.style.setProperty('--y', `${y}px`);
+        });
+    });
+    // 增加一点点自定义属性让部分卡片背景微光感 (可选)
+    const styleSheet = document.createElement("style");
+    styleSheet.textContent = `
+        .skill-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-card::after {
+            content: '';
+            position: absolute;
+            top: var(--y, 50%);
+            left: var(--x, 50%);
+            width: 0px;
+            height: 0px;
+            background: radial-gradient(circle, rgba(100,160,255,0.2) 0%, rgba(100,160,255,0) 80%);
+            transition: width 0.4s ease, height 0.4s ease, opacity 0.3s;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            opacity: 0;
+        }
+        .skill-card:hover::after {
+            width: 300px;
+            height: 300px;
+            opacity: 0.6;
+        }
+    `;
+    document.head.appendChild(styleSheet);
+    
+    // 如果存在技能进度条（原页面有类似.skill-level，但未使用，为了以防万一保留observer无报错）
+    const skillBars = document.querySelectorAll('.skill-level');
+    if (skillBars.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    const bar = entry.target;
+                    const width = bar.style.width;
+                    if(width && width !== '0%') {
+                        bar.style.transition = 'width 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1)';
+                    }
+                    observer.unobserve(bar);
+                }
+            });
+        }, { threshold: 0.4 });
+        skillBars.forEach(bar => observer.observe(bar));
+    }
+
+    // 小优化：z-library卡片增加额外新标签页打开提示（浏览器已支持，无需多言）
+    // 完美兼容移动端触摸
+    console.log("高奕江个人主页 | 资源整合版 | Z-Library 已优雅嵌入");
 </script>
 </body>
 </html>
