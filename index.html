@@ -252,6 +252,17 @@
             font-size: 1.4rem;
             font-weight: 600;
         }
+        .update-time {
+            position: absolute;
+            right: 1rem;
+            bottom: 0.7rem;
+            font-size: 0.72rem;
+            color: #8fa8d8;
+        }
+        .skill-card.with-update {
+            min-height: 86px;
+            padding-bottom: 2rem;
+        }
         /* 特殊资源卡片样式——ZLIB 醒目 */
         .resource-card {
             background: linear-gradient(135deg, rgba(35, 55, 90, 0.85), rgba(20, 30, 55, 0.9));
@@ -384,11 +395,12 @@
         <div class="skills-grid">
             <div>
                 <a href="固体物理.pdf" target="_blank">
-                    <div class="skill-card">
+                    <div class="skill-card with-update">
                         <div class="skill-header">
                             <i class="fas fa-file-pdf"></i>
                             <span class="skill-name">固体物理</span>
                         </div>
+                        <span class="update-time">更新时间2026.5.5</span>
                     </div>
                 </a> 
             </div>
