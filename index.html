@@ -168,31 +168,15 @@
         .avatar-card:hover {
             transform: scale(1.02);
         }
-        .avatar-placeholder {
+        .avatar-image {
             width: 200px;
             height: 200px;
-            background: linear-gradient(135deg, #2c3e66, #121a2c);
             border-radius: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            color: #aac9ff;
-            font-size: 4rem;
-            font-family: monospace;
+            display: block;
+            object-fit: cover;
+            object-position: center;
             box-shadow: inset 0 0 15px rgba(0,0,0,0.3), 0 8px 20px rgba(0,0,0,0.2);
             border: 1px solid rgba(100, 160, 255, 0.4);
-        }
-        .avatar-placeholder span:first-child {
-            font-size: 4rem;
-            font-weight: 500;
-        }
-        .avatar-placeholder span:last-child {
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            margin-top: 8px;
-            opacity: 0.8;
         }
 
         /* 通用章节 */
@@ -378,10 +362,7 @@
         </div>
         <div class="avatar-area">
             <div class="avatar-card">
-                <div class="avatar-placeholder">
-                    <span>✨</span>
-                    <span>头像待更新</span>
-                </div>
+                <img class="avatar-image" src="assets/avatar.jpg" alt="个人头像">
             </div>
         </div>
     </div>
